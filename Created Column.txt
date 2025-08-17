@@ -1,0 +1,23 @@
+Created Column
+
+
+
+1. Pickup Date = DATE(YEAR('Trip Details'[Pickup Time]), MONTH('Trip Details'[Pickup Time]), DAY('Trip Details'[Pickup Time]))
+
+
+
+
+2. Trip Type (Day/ Night) = 
+VAR HourofDay = HOUR('Trip Details'[Pickup Time])
+RETURN
+IF(HourofDay>=17 || HourofDay < 6, "Night Trip", "Day Trip")
+
+
+
+
+3. Pickup Hour (HH MM SS) = TIME(HOUR('Trip Details'[Pickup Time]), MINUTE('Trip Details'[Pickup Time]), SECOND('Trip Details'[Pickup Time]) )
+
+
+
+
+4. Pickup Hour = HOUR('Trip Details'[Pickup Time])
