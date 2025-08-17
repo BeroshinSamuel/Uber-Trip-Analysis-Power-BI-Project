@@ -1,0 +1,13 @@
+Created Table
+
+
+1. Dynamic Measure = {
+    ("Total Bookings", NAMEOF('Trip Details'[Total Bookings]), 0),
+    ("Total Booking Value", NAMEOF('Trip Details'[Total Booking Value]), 1),
+    ("Total Trip Distance", NAMEOF('Trip Details'[Total Trip Distance Measure]), 2)
+}
+
+
+
+
+2. Calendar Table = CALENDAR(MIN('Trip Details'[Pickup Date]), MAX('Trip Details'[Pickup Date]))
